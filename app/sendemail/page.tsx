@@ -22,7 +22,7 @@ export default function QuoteRequestPage() {
 
     try {
       // Replace with your backend email endpoint
-      const res = await fetch('http://localhost:8000/api/send-quote-email', {
+      const res = await fetch('https://blog-backend-one-xi.vercel.app/api/send-quote-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

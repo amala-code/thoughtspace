@@ -112,7 +112,7 @@ export default function BlogGrid() {
       setError(false);
       
       try {
-        const res = await fetch('http://localhost:8000/api/blogs', {
+        const res = await fetch('https://blog-backend-one-xi.vercel.app/api/blogs', {
           // Add cache control for faster subsequent loads
           cache: 'force-cache',
           next: { revalidate: 60 } // Revalidate every 60 seconds
@@ -158,7 +158,7 @@ export default function BlogGrid() {
   useEffect(() => {
     const handleBlogUpdate = async () => {
       try {
-        const res = await fetch('http://localhost:8000/api/blogs');
+        const res = await fetch('https://blog-backend-one-xi.vercel.app/api/blogs');
         if (!res.ok) return;
         
         const data = await res.json();

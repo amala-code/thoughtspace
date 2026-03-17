@@ -148,7 +148,7 @@ const TravelGuiderApp = () => {
  const fetchBlogs = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/api/blogs');
+      const response = await fetch('https://blog-backend-one-xi.vercel.app/api/blogs');
       const data = await response.json();
       console.log(data);
       

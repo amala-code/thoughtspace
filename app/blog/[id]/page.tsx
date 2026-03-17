@@ -138,7 +138,7 @@ export default function BlogPost() {
     const fetchBlog = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`http://localhost:8000/api/blogs/${blogId}`);
+        const response = await fetch(`https://blog-backend-one-xi.vercel.app/api/blogs/${blogId}`);
         if (response.ok) {
           const data = await response.json();
           const blogData: Blog = {
